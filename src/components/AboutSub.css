@@ -1,0 +1,21 @@
+import React from 'react';
+
+.about-sub {
+  margin-top: 1.5rem;
+  background-color: #1a1a2e;
+  border-left: 4px solid #e94560;
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+}
+
+.about-sub h3 {
+  font-size: 1.2rem;
+  color: #e94560;
+  margin-bottom: 0.8rem;
+}
+
+.about-sub p {
+  color: #c0c0d8;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,40 @@
+.about {
+  max-width: 700px;
+}
+
+.about h1 {
+  font-size: 2rem;
+  color: #e94560;
+  margin-bottom: 0.5rem;
+}
+
+.about-intro {
+  color: #a0a0c0;
+  margin-bottom: 1.2rem;
+}
+
+.about-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  color: #c0c0d8;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border: 1px solid #2a2a45;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.about-link:hover {
+  border-color: #e94560;
+  color: #e8e8f0;
+}
+
+.about-link.active {
+  background-color: #e94560;
+  border-color: #e94560;
+  color: white;
+}

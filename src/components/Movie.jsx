@@ -1,3 +1,4 @@
+import React from 'react';
 import './Movie.css';
 
 function Movie(props) {

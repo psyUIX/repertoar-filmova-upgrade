@@ -1,0 +1,11 @@
+.movies-page h1 {
+  font-size: 1.8rem;
+  color: #e94560;
+  margin-bottom: 1.5rem;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

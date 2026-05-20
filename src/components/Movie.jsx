@@ -9,6 +9,7 @@ function Movie(props) {
       <img src={props.poster} alt={props.title} />
       <div className="movie-info">
         <h3>{props.title}</h3>
+        <p>👍 {props.likes} | 👎 {props.dislikes}</p>
 
         {props.hall
           ? <p>Sala: <strong>{props.hall}</strong></p>

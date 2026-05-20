@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Movie from '../components/Movie';
+import MovieForm from '../components/MovieForm';
 import './Movies.css';
 
 const initialMovies = [
@@ -12,6 +13,7 @@ const initialMovies = [
 
 function Movies() {
   const [movies, setMovies] = useState(initialMovies);
+  const [editMovie, setEditMovie] = useState(null);
   const today = new Date().toLocaleDateString('sr-RS');
 
   function handleReaction(title, reaction) {
@@ -23,6 +25,23 @@ function Movies() {
       }
       return movie;
     }));
+  }
+
+  function handleAddMovie(newMovie) {
+    if (editMovie) {
+      setMovies(prev => prev.map(m => m.title === editMovie.title ? newMovie : m));
+      setEditMovie(null);
+    } else {
+      setMovies(prev => [...prev, newMovie]);
+    }
+  }
+
+  function handleEdit(movie) {
+    setEditMovie(movie);
+  }
+
+  function handleCancelEdit() {
+    setEditMovie(null);
   }
 
   return (
@@ -39,9 +58,15 @@ function Movies() {
             likes={movie.likes}
             dislikes={movie.dislikes}
             onReaction={handleReaction}
+            onEdit={handleEdit}
           />
         ))}
       </div>
+      <MovieForm
+        onSubmit={handleAddMovie}
+        editMovie={editMovie}
+        onCancelEdit={handleCancelEdit}
+      />
     </div>
   );
 }

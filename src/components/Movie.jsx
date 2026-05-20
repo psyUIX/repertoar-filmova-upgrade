@@ -21,6 +21,14 @@ function Movie(props) {
         <div className="movie-actions">
           <button onClick={() => props.onReaction(props.title, "Like")}>👍 Like</button>
           <button onClick={() => props.onReaction(props.title, "Dislike")}>👎 Dislike</button>
+          <button onClick={() => props.onEdit({
+            title: props.title,
+            hall: props.hall,
+            price: props.price,
+            poster: props.poster,
+            likes: props.likes,
+            dislikes: props.dislikes
+          })}>✏️ Izmeni</button>
         </div>
       </div>
     </div>
